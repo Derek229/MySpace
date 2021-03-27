@@ -18,7 +18,7 @@ const Home = () => {
   }
   return (
     <div>
-    <header as='h1' textAlign='center'>Login in/ register</header>
+    <header as='h1' textAlign='center'>My Space Home page</header>
     </div>
   )
 }
