@@ -14,8 +14,8 @@ class Api::PostsController < ApplicationController
   end
 
   def create
-    post = current_user.post.new(post_params)
-    if post.save
+    posts = current_user.posts.new(post_params)
+    if posts.save
       render json: post 
     else
     end
