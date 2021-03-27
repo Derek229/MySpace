@@ -12,6 +12,7 @@ import FetchUser from './components/FetcherUser';
 import ProtectedRoute from './components/ProtectedRoutes';
 import UserPosts from './pages/UserPost';
 import Post from './pages/Post';
+import NewPost from './pages/NewPost';
 
 function App() {
 
@@ -22,7 +23,7 @@ function App() {
     <Container>
       <Switch>
         <ProtectedRoute exact path='/' component={UserPosts} />
-
+        <ProtectedRoute exact path='/posts/new' component={NewPost}/>
         <ProtectedRoute exact path='/posts/:id' component={Post} />
         <Route exact path='/about' component={About} />
         <Route exact path='/componentDemo' component={ComponentDemo} />
