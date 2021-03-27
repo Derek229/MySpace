@@ -27,7 +27,7 @@ const renderPosts = () => {
   return posts.map(post =>{
     return(
       <Link to={{pathname: `posts/${post.id}`, post: post}}>
-        <h3>{post.title}</h3>
+        <h3>{post.body}</h3>
       </Link>
     )
   })
