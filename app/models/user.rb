@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :validatable
   include DeviseTokenAuth::Concerns::User
 
-  def get_
+ 
 
   def get_friends_post()
     ids= self.friends.empty? ? [0] : self.friends
