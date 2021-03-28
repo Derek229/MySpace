@@ -22,7 +22,7 @@ class Api::PostsController < ApplicationController
     end
 
   def destroy 
-    @post.delete
+    @post.destroy
     render json: @post
   end 
 
