@@ -19,7 +19,16 @@ class Api::PostsController < ApplicationController
     if post.save
       render json: post 
     else
+  end
+
+  def update 
+    post = Post.find(params[:id])
+    if post.update(post_params)
+      render json: post
+    else
+      render json: { errors: postt.errors }, status: :unprocessable_entity
     end
+  end 
 
   def destroy 
     @post.destroy

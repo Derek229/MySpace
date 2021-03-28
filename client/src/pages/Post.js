@@ -33,6 +33,8 @@ const Post = (props) =>{
     setPosts(postsRemain)
   }
 
+  
+
 
   // const deleteVaccineClickHandler = async ()=>{
   //   try{
@@ -53,13 +55,14 @@ const Post = (props) =>{
   //   } catch (err) {
   //     console.log(err)
   //   }
-  // }
+  // }    <Link to={`/bugs/${bugId}/vaccines/${id}/edit`}>    /api/posts/:id
 
   return(
     <div>
       <Link to='/'>back</Link>
       <h1>{post.body}</h1> 
       <Button onClick ={()=> deletePost(post.id)}>Delete</Button>
+      <Link to ='/api/updatePost'>Edit</Link>
     </div>
   )
 }

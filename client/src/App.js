@@ -13,6 +13,7 @@ import ProtectedRoute from './components/ProtectedRoutes';
 import UserPosts from './pages/UserPost';
 import Post from './pages/Post';
 import NewPost from './pages/NewPost';
+import UpdatePost from './pages/UpdatePost';
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
         <ProtectedRoute exact path='/posts/new' component={NewPost}/>
         <ProtectedRoute exact path='/posts/:id' component={Post} />
         <Route exact path='/about' component={About} />
+        <Route exact path='/updatePost' component={UpdatePost}/>
         <Route exact path='/componentDemo' component={ComponentDemo} />
         <Route exact path='/login' component={Login}/>
         <Route exact path='/register' component={Register} />
