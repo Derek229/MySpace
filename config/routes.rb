@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   namespace :api do 
     get '/api_test', to:'static#api_test'
-    resources :posts, only: [:index, :create]
+    resources :posts 
     get 'all_posts', to: 'posts#all_posts'
     get 'friend_posts', to: 'posts#friends_posts'
   end

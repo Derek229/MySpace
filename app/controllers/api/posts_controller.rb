@@ -1,5 +1,6 @@
 class Api::PostsController < ApplicationController
   before_action :authenticate_user!, except: [:all_posts]
+  before_action :set_post, only: [:show, :destroy]
 
   def all_posts
     render json: Post.all
@@ -14,14 +15,25 @@ class Api::PostsController < ApplicationController
   end
 
   def create
-    posts = current_user.posts.new(post_params)
-    if posts.save
+    post = current_user.posts.new(post_params)
+    if post.save
       render json: post 
     else
     end
+
+  def destroy 
+    @post.delete
+    render json: @post
+  end 
+
+
   end
 
   private
+
+  def set_post
+    @post = Post.find(params[:id])
+  end
 
   def post_params
     params.require(:post).permit(:body)

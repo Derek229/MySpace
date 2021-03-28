@@ -56,7 +56,7 @@ function NewPost() {
                 </label>
                 <input
                     // TODO uncomment before pushing prod
-                    name="post"
+                    name="body"         //  <---- JED switched from 'post'
                     ref={register({
                         required: "Required",
                     })}

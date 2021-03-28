@@ -9,7 +9,8 @@ const FetchUser = (props) => {
   
   useEffect(() => {
     checkUser();
-  }, []);
+  });        // <---Jed remove deppArr
+  
   const checkUser = async () => {
     
     if (authenticated || !localStorage.getItem("access-token")) {
